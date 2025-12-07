@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brilliant Castles Group Home</title>
+  <title>Brilliant Castles Residential Living</title>
 
   <style>
     body {
@@ -20,6 +20,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    header .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header img.logo {
+      height: 40px;
     }
 
     header h1 {
@@ -57,11 +67,18 @@
       margin: auto;
     }
 
+    .dark-section {
+      background: #1a1a1a;
+      color: white;
+      padding: 60px 20px;
+      max-width: 100%;
+    }
+
     h2.section-title {
       text-align: center;
       margin-bottom: 30px;
       font-size: 32px;
-      color: #222;
+      color: inherit;
     }
 
     .services {
@@ -127,6 +144,16 @@
       text-align: center;
     }
 
+    .logo-block {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .logo-block img {
+      height: 120px;
+      filter: brightness(0) invert(1);
+    }
+
     footer {
       background: #111;
       color: white;
@@ -141,7 +168,10 @@
 
   <!-- HEADER -->
   <header>
-    <h1>Brilliant Castles</h1>
+    <div class="logo-container">
+      <img class="logo" src="YOUR_LOGO_URL" alt="Brilliant Castles Logo">
+      <h1>Brilliant Castles</h1>
+    </div>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -152,19 +182,32 @@
 
   <!-- HERO -->
   <div class="hero">
-    <h2>Compassionate Care. Safe Living. A Brighter Future.</h2>
+    <h2>Safe. Supportive. Residential Living.</h2>
   </div>
 
   <!-- ABOUT SECTION -->
   <section id="about" class="section">
     <h2 class="section-title">About Brilliant Castles</h2>
     <p>
-      Brilliant Castles is a supportive and nurturing group home dedicated to empowering individuals 
-      through structured care, dignity, and a safe community environment.  
-      Our mission is to create a place where every resident feels valued, supported, and inspired to 
-      reach their highest potential.
+      Brilliant Castles provides nurturing residential living accommodations grounded in community, stability, 
+      and empowerment. Our co-living environments are designed to ensure every individual feels supported, respected, 
+      and encouraged to thrive.
     </p>
+    <p><strong>Serving South New Jersey & Philadelphia.</strong></p>
   </section>
+
+  <!-- DARK LOGO + DESCRIPTION SECTION -->
+  <div class="dark-section">
+    <h2 class="section-title">Residential Living</h2>
+    <p style="max-width: 900px; margin: auto; text-align: center;">
+      We offer structured, compassionate residential co-living spaces that prioritize safety, independence, and dignity. 
+      Our mission is to create environments that empower personal growth while fostering meaningful community connections.
+    </p>
+
+    <div class="logo-block">
+      <img src="YOUR_LOGO_URL" alt="Brilliant Castles Logo">
+    </div>
+  </div>
 
   <!-- SERVICES SECTION -->
   <section id="services" class="section">
@@ -172,23 +215,23 @@
 
     <div class="services">
       <div class="service-box">
-        <h3>24/7 Residential Care</h3>
-        <p>Round-the-clock support from trained caregivers providing safe, structured, and compassionate assistance.</p>
+        <h3>24/7 Residential Support</h3>
+        <p>Compassionate support available around the clock for safety, structure, and comfort.</p>
       </div>
 
       <div class="service-box">
-        <h3>Daily Living Support</h3>
-        <p>Help with meals, hygiene, medication reminders, transportation, and personal routines.</p>
+        <h3>Daily Living Assistance</h3>
+        <p>Support with routines, meals, wellness, scheduling, transportation, and day‑to‑day tasks.</p>
       </div>
 
       <div class="service-box">
-        <h3>Life Skills Development</h3>
-        <p>Programs to build independence: budgeting, communication, self-care, employment readiness.</p>
+        <h3>Life Skills Building</h3>
+        <p>Programs including budgeting, communication, employment skills, and personal development.</p>
       </div>
 
       <div class="service-box">
-        <h3>Emotional & Behavioral Support</h3>
-        <p>Supportive environment fostering emotional stability, positive behaviors, and personal growth.</p>
+        <h3>Emotional Support</h3>
+        <p>Stable, structured environments that encourage emotional growth, balance, and resilience.</p>
       </div>
     </div>
   </section>
@@ -197,9 +240,8 @@
   <section id="mission" class="section">
     <h2 class="section-title">Our Mission</h2>
     <p>
-      Brilliant Castles is committed to providing a safe, enriching environment where individuals can 
-      thrive. We focus on respect, empowerment, and holistic care — helping every resident build confidence 
-      and achieve meaningful personal goals.
+      We are committed to creating supportive living environments where individuals can grow confidently and independently. 
+      Through respect, safety, and personalized support, we help residents pursue meaningful goals and build brighter futures.
     </p>
   </section>
 
@@ -232,7 +274,7 @@
 
   <!-- FOOTER -->
   <footer>
-    © 2025 Brilliant Castles Group Home — All Rights Reserved
+    © 2025 Brilliant Castles — All Rights Reserved
   </footer>
 
   <!-- FORM HANDLER -->
@@ -250,8 +292,3 @@
         form.reset();
       })
       .catch(err => alert("Form submission error: " + err));
-    }
-  </script>
-
-</body>
-</html>

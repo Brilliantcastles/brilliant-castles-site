@@ -1,81 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Brilliant Castle</title>
-<style>
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #111111;
-color: white;
-}
-header {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 20px;
-background: #0d0d0d;
-}
-header img {
-width: 150px;
-}
-.hero {
-text-align: center;
-padding: 80px 20px;
-background: #111111;
-}
-.hero h1 {
-font-size: 48px;
-margin-bottom: 10px;
-}
-.hero p {
-font-size: 20px;
-color: #cccccc;
-}
-.section {
-padding: 60px 20px;
-max-width: 900px;
-margin: auto;
-}
-.footer {
-text-align: center;
-padding: 40px;
-background: #0d0d0d;
-color: #aaaaaa;
-margin-top: 40px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detroit: The Best Place to Live</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1595341885615-2bfcfd2aa09f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGV0cm9pdHxlbnwwfHx8fDE2OTk2NzE1NDU&ixlib=rb-4.0.3&q=80&w=1200') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    header h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .feature {
+      flex: 1 1 250px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .feature img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .features {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-<img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAYAAAA10dzkAAAgAElEQVR4Xu2dB5gcxXnHf/Nld0tLS0tLS0tobSFtra2tvTW2tpaWgnQJdhY2NjU4BAkqJAGVEgBoAoaIGBgYGBgYEhIgoFJoCkpAQgRBAEREBIkWcCgYFbmx7e1r3t3nnuzN7s7OzOyNle98t7ve9z85z7/czZ2bmnPPMmdk7s7O7uy2u1Wu2Wq3W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/W6/" alt="Brilliant Castle Logo" />
-</header>
 
+  <header>
+    <h1>Detroit: The Best Place to Live</h1>
+  </header>
 
-<section class="hero">
-<h1>Brilliant Castle</h1>
-<p>Strength • Security • Legacy</p>
-</section>
+  <section>
+    <h2>Why We Love Detroit</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1564866657314-cb8e52696c3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Detroit Skyline">
+        <p>Vibrant city life with amazing skyline views.</p>
+      </div>
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1591195854270-0225d3db0b47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Riverfront">
+        <p>Beautiful riverfronts perfect for relaxing walks.</p>
+      </div>
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1582934360368-84d7177a4c21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Music and Culture">
+        <p>Rich music and cultural history to explore.</p>
+      </div>
+    </div>
+  </section>
 
+  <section>
+    <h2>Share Your Detroit Memories</h2>
+    <form name="detroit-memories" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="detroit-memories">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Share your pleasant Detroit memory..." rows="5" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
-<section class="section">
-<h2>Our Mission</h2>
-<p>
-At Brilliant Castle, we focus on excellence, trust, and long-term stability.
-</p>
-</section>
+  <footer>
+    &copy; 2025 Detroit Love. All rights reserved.
+  </footer>
 
-
-<section class="section">
-<h2>Contact Us</h2>
-<p>Email: support@brilliantcastle.com</p>
-</section>
-
-
-<footer class="footer">
-© 2025 Brilliant Castle. All Rights Reserved.
-</footer>
 </body>
 </html>

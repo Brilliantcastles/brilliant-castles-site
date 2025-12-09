@@ -1,294 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brilliant Castles Residential Living</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brilliant Castles Residential Living</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #333;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background-color: #ffffff;
+            color: #111;
+            line-height: 1.6;
+        }
 
-    header {
-      background: #0e0e0e;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        /* NAVBAR */
+        header {
+            background: #000;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    header .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+        header img {
+            height: 55px;
+            filter: drop-shadow(0 0 10px white);  /* white silhouette */
+        }
 
-    header img.logo {
-      height: 40px;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 1.1rem;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 1px;
-    }
+        /* HERO */
+        .hero {
+            background: url('hero.jpg') center/cover no-repeat;
+            height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 16px;
-    }
+        .hero h1 {
+            font-size: 3rem;
+            background: rgba(0,0,0,0.55);
+            padding: 20px 30px;
+            border-radius: 8px;
+        }
 
-    .hero {
-      height: 70vh;
-      background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fit=crop&w=1400&q=80') center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
+        /* SECTIONS */
+        section {
+            padding: 70px 13%;
+        }
 
-    .hero h2 {
-      font-size: 48px;
-      text-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    }
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
 
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+        /* DARK SECTION */
+        .dark-section {
+            background: #000;
+            color: #fff;
+            padding: 80px 13%;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
 
-    .dark-section {
-      background: #1a1a1a;
-      color: white;
-      padding: 60px 20px;
-      max-width: 100%;
-    }
+        .dark-section img {
+            width: 260px;
+            filter: drop-shadow(0 0 12px white);
+        }
 
-    h2.section-title {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 32px;
-      color: inherit;
-    }
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
+        .service-box {
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fafafa;
+        }
 
-    .service-box {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+        /* CONTACT FORM */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
 
-    .service-box h3 {
-      margin-top: 0;
-    }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+        }
 
-    .contact-section {
-      background: white;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+        button {
+            background: black;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 6px;
+        }
 
-    form label {
-      font-weight: bold;
-    }
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
 
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
-      background: #222;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #444;
-    }
-
-    .success {
-      display: none;
-      padding: 12px;
-      background: #d9ffda;
-      border: 1px solid #70db70;
-      border-radius: 5px;
-      margin-top: 15px;
-      text-align: center;
-    }
-
-    .logo-block {
-      text-align: center;
-      padding: 30px;
-    }
-
-    .logo-block img {
-      height: 120px;
-      filter: brightness(0) invert(1);
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-    }
-  </style>
+        @media (max-width: 830px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo-container">
-      <img class="logo" src="YOUR_LOGO_URL" alt="Brilliant Castles Logo">
-      <h1>Brilliant Castles</h1>
-    </div>
+<!-- NAVBAR -->
+<header>
+    <img src="logo.jpeg" alt="Brilliant Castles Logo">
     <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#mission">Mission</a>
-      <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#living">Residential Living</a>
+        <a href="#services">Services</a>
+        <a href="#mission">Mission</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
+</header>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h2>Safe. Supportive. Residential Living.</h2>
-  </div>
+<!-- HERO -->
+<div class="hero">
+    <h1>Safe. Supportive. Residential Living.</h1>
+</div>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section">
-    <h2 class="section-title">About Brilliant Castles</h2>
-    <p>
-      Brilliant Castles provides nurturing residential living accommodations grounded in community, stability, 
-      and empowerment. Our co-living environments are designed to ensure every individual feels supported, respected, 
-      and encouraged to thrive.
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Brilliant Castles</h2>
+    <p style="text-align:center; max-width:750px; margin:auto;">
+        Brilliant Castles provides nurturing residential living accommodations created 
+        for comfort, stability, and empowerment. Our mission is to help individuals 
+        thrive in a supportive, structured, and caring environment.
     </p>
-    <p><strong>Serving South New Jersey & Philadelphia.</strong></p>
-  </section>
-
-  <!-- DARK LOGO + DESCRIPTION SECTION -->
-  <div class="dark-section">
-    <h2 class="section-title">Residential Living</h2>
-    <p style="max-width: 900px; margin: auto; text-align: center;">
-      We offer structured, compassionate residential co-living spaces that prioritize safety, independence, and dignity. 
-      Our mission is to create environments that empower personal growth while fostering meaningful community connections.
+    <p style="text-align:center; margin-top:20px; font-weight:bold;">
+        Serving South New Jersey & Philadelphia, PA
     </p>
+</section>
 
-    <div class="logo-block">
-      <img src="YOUR_LOGO_URL" alt="Brilliant Castles Logo">
+<!-- DARK SECTION - RESIDENTIAL LIVING -->
+<section id="living" class="dark-section">
+    <img src="logo.jpeg" alt="Castle Logo">
+
+    <div style="flex:1; min-width:280px;">
+        <h2 style="text-align:left;">Residential Living</h2>
+        <p>
+            We offer structured, compassionate residential living spaces designed to promote 
+            growth, stability, and independence. Our homes provide the consistency and support 
+            residents need while fostering meaningful community connections.
+        </p>
     </div>
-  </div>
+</section>
 
-  <!-- SERVICES SECTION -->
-  <section id="services" class="section">
-    <h2 class="section-title">Our Services</h2>
+<!-- SERVICES -->
+<section id="services">
+    <h2>Our Services</h2>
 
     <div class="services">
-      <div class="service-box">
-        <h3>24/7 Residential Support</h3>
-        <p>Compassionate support available around the clock for safety, structure, and comfort.</p>
-      </div>
+        <div class="service-box">
+            <h3>24/7 Residential Support</h3>
+            <p>Complete support including supervision, safety monitoring, and assistance.</p>
+        </div>
 
-      <div class="service-box">
-        <h3>Daily Living Assistance</h3>
-        <p>Support with routines, meals, wellness, scheduling, transportation, and day‑to‑day tasks.</p>
-      </div>
+        <div class="service-box">
+            <h3>Daily Living Assistance</h3>
+            <p>We help residents with meals, hygiene, transportation, and daily tasks.</p>
+        </div>
 
-      <div class="service-box">
-        <h3>Life Skills Building</h3>
-        <p>Programs including budgeting, communication, employment skills, and personal development.</p>
-      </div>
+        <div class="service-box">
+            <h3>Life Skills Building</h3>
+            <p>Training in communication, cooking, budgeting, and social skills.</p>
+        </div>
 
-      <div class="service-box">
-        <h3>Emotional Support</h3>
-        <p>Stable, structured environments that encourage emotional growth, balance, and resilience.</p>
-      </div>
+        <div class="service-box">
+            <h3>Emotional Support</h3>
+            <p>Empathy-driven staff who encourage confidence, dignity, and personal growth.</p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- MISSION -->
-  <section id="mission" class="section">
-    <h2 class="section-title">Our Mission</h2>
-    <p>
-      We are committed to creating supportive living environments where individuals can grow confidently and independently. 
-      Through respect, safety, and personalized support, we help residents pursue meaningful goals and build brighter futures.
-    </p>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="section">
-    <h2 class="section-title">Contact Us</h2>
-
-    <div class="contact-section">
-      <form name="contact" method="POST" data-netlify="true" onsubmit="handleSubmit(event)">
-        <input type="hidden" name="form-name" value="contact">
-
-        <label>Your Name</label>
-        <input type="text" name="name" required>
-
-        <label>Email Address</label>
-        <input type="email" name="email" required>
-
-        <label>Phone Number</label>
-        <input type="text" name="phone">
-
-        <label>Your Message</label>
-        <textarea name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-
-      <div id="success" class="success">Thank you! Your message has been sent.</div>
+<!-- MISSION + CONTACT -->
+<section class="contact-grid" id="mission">
+    <div>
+        <h2>Our Mission</h2>
+        <p>
+            We are committed to creating stable, supportive living environments that empower 
+            individuals to thrive. Through structure, community, and tailored support, we help 
+            residents achieve meaningful independence and lasting well-being.
+        </p>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Brilliant Castles — All Rights Reserved
-  </footer>
+    <div id="contact">
+        <h2>Contact Us</h2>
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="phone" placeholder="Phone Number">
+            <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
 
-  <!-- FORM HANDLER -->
-  <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      const form = e.target;
+<footer>
+    © 2025 Brilliant Castles Residential Living
+</footer>
 
-      fetch("/", {
-        method: "POST",
-        body: new FormData(form)
-      })
-      .then(() => {
-        document.getElementById("success").style.display = "block";
-        form.reset();
-      })
-      .catch(err => alert("Form submission error: " + err));
+</body>
+</html>
